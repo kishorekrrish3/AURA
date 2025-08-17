@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo"><img src="/assets/logo.png" alt="Logo" style="height: 2em; width: 2em; border-radius: 50%; object-fit: cover; vertical-align: middle; margin-right: 0.6em;">AURA</h1>
+            <div class="nav-controls">
+                <button id="darkModeToggle" class="dark-mode-btn">🌙</button>
+                <button id="resetBtn" class="reset-btn">🔄</button>
+            </div>
+                <style>
+                    body, html, * {
+                        font-family: 'Montserrat', Arial, sans-serif;
+                    }
+                    .nav-logo {
+                        font-weight: 400;
+                    }
+                </style>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+        <!-- Date Display -->
+        <div class="date-card card">
+            <h2 id="currentDate"></h2>
+            <p id="dayOfWeek"></p>
+        </div>
+
+        <!-- Habits Section -->
+        <div class="habits-card card">
+            <h3>📋 Daily Habits</h3>
+            <div class="habits-grid">
+                <div class="habit-item">
+                    <label class="habit-label">
+                        <input type="checkbox" id="exercise" class="habit-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="habit-text">Exercise (30min)</span>
+                    </label>
+                </div>
+                <div class="habit-item">
+                    <label class="habit-label">
+                        <input type="checkbox" id="reading" class="habit-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="habit-text">Reading</span>
+                    </label>
+                </div>
+                <div class="habit-item">
+                    <label class="habit-label">
+                        <input type="checkbox" id="meditation" class="habit-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="habit-text">Meditation</span>
+                    </label>
+                </div>
+                <div class="habit-item">
+                    <label class="habit-label">
+                        <input type="checkbox" id="healthy-meal" class="habit-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="habit-text">Healthy Meal</span>
+                    </label>
+                </div>
+                <div class="habit-item">
+                    <label class="habit-label">
+                        <input type="checkbox" id="sleep-early" class="habit-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="habit-text">Sleep Early</span>
+                    </label>
+                </div>
+                <div class="habit-item">
+                    <label class="habit-label">
+                        <input type="checkbox" id="no-social-media" class="habit-checkbox">
+                        <span class="checkmark"></span>
+                        <span class="habit-text">Limit Social Media</span>
+                    </label>
+                </div>
+            </div>
+            <div class="habits-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="habitsProgress"></div>
+                </div>
+                <span class="progress-text" id="habitsProgressText">0/6 completed</span>
+            </div>
+        </div>
+
+        <!-- Mood Tracker -->
+        <div class="mood-card card">
+            <h3>😊 How are you feeling?</h3>
+            <div class="mood-selector">
+                <button class="mood-btn" data-mood="terrible">😫</button>
+                <button class="mood-btn" data-mood="bad">😔</button>
+                <button class="mood-btn" data-mood="okay">😐</button>
+                <button class="mood-btn" data-mood="good">😊</button>
+                <button class="mood-btn" data-mood="amazing">🤩</button>
+            </div>
+            <div class="mood-display" id="moodDisplay">
+                <p>Select your mood for today</p>
+            </div>
+        </div>
+
+        <!-- Water Tracker -->
+        <div class="water-card card">
+            <h3>💧 Water Intake</h3>
+            <div class="water-container">
+                <div class="water-bottle">
+                    <div class="water-fill" id="waterFill"></div>
+                    <div class="water-level" id="waterLevel">0/8</div>
+                </div>
+                <div class="water-controls">
+                    <button id="addWater" class="water-btn add">+</button>
+                    <button id="removeWater" class="water-btn remove">-</button>
+                </div>
+            </div>
+            <p class="water-goal">Goal: 8 glasses (2L)</p>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="stats-card card">
+            <h3>📈 Today's Overview</h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="completedHabits">0</div>
+                    <div class="stat-label">Habits Done</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="currentMood">-</div>
+                    <div class="stat-label">Mood</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="waterGlasses">0</div>
+                    <div class="stat-label">Glasses H2O</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="overallScore">0%</div>
+                    <div class="stat-label">Daily Score</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Track your daily progress • Build better habits • Live better</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
