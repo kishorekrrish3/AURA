@@ -29,6 +29,11 @@
 3. **Start tracking!**
     - No accounts; no setup; no internet required after first load.
     - Works offline.
+  
+## 📚 Screenshots
+
+![Dark Mode](./assets/dark.png)
+![Light Mode](./assets/light.png)
 
 ## 🎉 Submission
 
