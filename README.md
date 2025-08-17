@@ -2,6 +2,8 @@
 
 **AURA Life Dashboard** is a minimal, modern, and fully responsive daily tracker — designed for students and first-time coders. Track your habits, mood, water intake, and see your personal growth day by day. All your data and daily logs are stored securely in your browser, with no accounts or cloud required.
 
+Check it out at https://aura-codesprout.vercel.app
+
 ## 🚀 Live Features
 
 - **Daily Habit Checklist:** Choose from six default habits — Exercise, Reading, Meditation, Healthy Meal, Sleep Early, Limit Social Media. Visual progress bar shows your achievements.
